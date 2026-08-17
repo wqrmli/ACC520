@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Managerial Accounting (ACC 520) — الاختبار الذاتي</title>
-<meta name="description" content="بنك أسئلة تفاعلي لمادة Managerial Accounting — مراجعة، اختبار ذاتي، وتقرير تشخيص نقاط الضعف.">
+<meta name="description" content="بنك أسئلة تفاعلي لمادة Managerial Accounting — مراجعة، اختبار ذاتي، تشخيص نقاط الضعف، وورقة قوانين.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -29,8 +29,8 @@ h1,h2,h3{margin:0;line-height:1.35;font-weight:600}
 .masthead-in{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .brand b{font-size:16px;font-weight:600;display:block}
 .brand span{font-size:11.5px;color:#9FB4C0;font-family:var(--mono);letter-spacing:.4px}
-.tabs{margin-inline-start:auto;display:flex;gap:4px;background:rgba(255,255,255,.08);padding:4px;border-radius:10px}
-.tab{background:none;border:0;color:#C4D3DB;padding:7px 15px;border-radius:7px;font-weight:500}
+.tabs{margin-inline-start:auto;display:flex;gap:4px;background:rgba(255,255,255,.08);padding:4px;border-radius:10px;flex-wrap:wrap}
+.tab{background:none;border:0;color:#C4D3DB;padding:7px 14px;border-radius:7px;font-weight:500}
 .tab:hover{color:#fff}
 .tab[aria-selected="true"]{background:var(--surface);color:var(--ink);font-weight:600}
 
@@ -47,10 +47,12 @@ h1,h2,h3{margin:0;line-height:1.35;font-weight:600}
 .btn-primary:hover{background:#095452;border-color:#095452}
 .btn-ghost{background:none;border-color:transparent;color:var(--muted)}
 .btn-ghost:hover{color:var(--ink);background:var(--rule-soft)}
+.btn-sm{padding:5px 11px;font-size:13px}
 :focus-visible{outline:2.5px solid var(--accent);outline-offset:2px}
 
 .chip{border:1px solid var(--rule);background:var(--surface);color:var(--ink-2);padding:5px 12px;border-radius:999px;font-size:13px}
 .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip:disabled{opacity:.4;cursor:not-allowed}
 .chips{display:flex;gap:7px;flex-wrap:wrap}
 
 .grid-2{display:grid;grid-template-columns:290px 1fr;gap:18px;align-items:start}
@@ -59,6 +61,7 @@ h1,h2,h3{margin:0;line-height:1.35;font-weight:600}
 .qhead{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--rule-soft);margin-bottom:14px}
 .qnum{font-family:var(--mono);font-weight:500;background:var(--ink);color:#fff;border-radius:7px;padding:3px 10px;font-size:13px}
 .tag{font-size:12px;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:2px 10px}
+.tag.flag{border-color:#E4CFA0;background:var(--warn-soft);color:var(--warn)}
 .stem{direction:ltr;text-align:left;white-space:pre-wrap;font-size:14.5px;line-height:1.7;color:var(--ink-2);margin-bottom:10px}
 table.matrix{direction:ltr;border-collapse:collapse;margin:6px 0 14px;font-size:13.5px;width:100%}
 table.matrix th,table.matrix td{border:1px solid var(--rule);padding:6px 10px;text-align:left;vertical-align:top}
@@ -78,8 +81,7 @@ table.matrix tr:nth-child(even) td{background:#FAFCFC}
 .opt.is-no{border-color:var(--no);background:var(--no-soft)}
 .opt.is-no .ltr{background:var(--no);color:#fff;border-color:var(--no)}
 .opt .mark{margin-inline-start:auto;font-size:12px;font-weight:600;flex:none}
-.opt.is-ok .mark{color:var(--ok)}
-.opt.is-no .mark{color:var(--no)}
+.opt.is-ok .mark{color:var(--ok)} .opt.is-no .mark{color:var(--no)}
 
 .verdict{margin-top:16px;border-radius:10px;padding:13px 15px;border:1px solid}
 .verdict.ok{background:var(--ok-soft);border-color:#BFDDD1}
@@ -114,13 +116,15 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
 .progress{height:5px;background:var(--rule-soft);border-radius:99px;overflow:hidden}
 .progress i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .25s}
 
-.exam-q{margin-bottom:14px;scroll-margin-top:120px}
+.exam-q{margin-bottom:14px;scroll-margin-top:130px}
 .stickybar{position:sticky;top:0;z-index:20;background:rgba(238,242,243,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule)}
-.stickybar .in{max-width:1180px;margin:0 auto;padding:11px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.stickybar .in{max-width:1180px;margin:0 auto;padding:11px 20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .navpanel{max-width:1180px;margin:0 auto;padding:0 20px 16px}
 .navpanel[hidden]{display:none}
 .pill{font-size:12.5px;font-family:var(--mono);padding:3px 10px;border-radius:999px;background:var(--rule-soft);color:var(--ink-2)}
 .pill.alert{background:var(--no-soft);color:var(--no)}
+.pill.clock{background:var(--ink);color:#fff;font-size:14px;letter-spacing:.5px}
+.pill.clock.low{background:var(--no)}
 
 .score{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
 .dial{--p:0;flex:none;width:118px;height:118px;border-radius:50%;display:grid;place-items:center;
@@ -144,19 +148,37 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
 .lv-good{background:var(--ok-soft);color:var(--ok)}
 .b-weak{background:var(--no)} .b-mid{background:var(--warn)} .b-good{background:var(--ok)}
 
+table.data{width:100%;border-collapse:collapse;font-size:13.5px}
+table.data th,table.data td{padding:8px 10px;border-bottom:1px solid var(--rule-soft);text-align:right}
+table.data th{font-size:12px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--rule)}
+table.data td.m{font-family:var(--mono);text-align:center}
+.trend-up{color:var(--ok);font-weight:600}
+.trend-down{color:var(--no);font-weight:600}
+
 .empty{text-align:center;color:var(--muted);padding:52px 20px}
 .empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:6px;font-weight:600}
+.notice{font-size:12.5px;color:var(--warn);background:var(--warn-soft);border:1px solid #E4CFA0;border-radius:8px;padding:7px 12px;margin-top:12px}
+
+/* formula sheet */
+.sheet h2{font-size:15px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.sheet h2:first-child{margin-top:0}
+.fx{display:grid;grid-template-columns:1fr;gap:9px}
+.fx-item{border:1px solid var(--rule);border-radius:9px;padding:10px 13px;background:var(--surface)}
+.fx-item b{display:block;font-size:13.5px;margin-bottom:3px}
+.fx-item code{display:block;direction:ltr;text-align:left;font-family:var(--mono);font-size:13px;background:var(--paper);border-radius:6px;padding:7px 10px;margin:5px 0;white-space:pre-wrap;line-height:1.6}
+.fx-item small{color:var(--muted);font-size:11.5px;font-family:var(--mono)}
+@media(min-width:780px){.fx{grid-template-columns:1fr 1fr}}
 
 #printArea{display:none}
 @media print{
-  @page{size:A4;margin:13mm}
+  @page{size:A4;margin:12mm}
   body{background:#fff;font-size:10.5pt;color:#000}
   .masthead,.wrap,.stickybar,.navpanel{display:none !important}
   #printArea{display:block}
   .p-head{border-bottom:2px solid #12212E;padding-bottom:8px;margin-bottom:14px}
   .p-head h1{font-size:16pt}
   .p-head p{margin:4px 0 0;font-size:9.5pt;color:#444}
-  .p-sec{margin:16px 0}
+  .p-sec{margin:14px 0}
   .p-sec h2{font-size:12pt;margin-bottom:8px;border-bottom:1px solid #999;padding-bottom:4px;direction:ltr;text-align:left}
   #printArea table{width:100%;border-collapse:collapse;font-size:9pt;margin-bottom:8px}
   #printArea th,#printArea td{border:1px solid #aaa;padding:4px 6px;text-align:left;direction:ltr;vertical-align:top}
@@ -171,6 +193,13 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   .p-ar{font-size:9.5pt;margin:0 0 3px}
   .p-meta{direction:ltr;text-align:left;font-size:8pt;color:#666;border-top:1px dotted #bbb;padding-top:3px}
   .lv-weak,.lv-mid,.lv-good{background:none;color:#000}
+  /* formula sheet print: two dense columns, one page */
+  .p-sheet{column-count:2;column-gap:8mm;font-size:8.4pt;line-height:1.45}
+  .p-sheet h3{font-size:9.5pt;margin:6px 0 3px;border-bottom:1px solid #12212E;break-after:avoid}
+  .p-sheet .f{break-inside:avoid;margin-bottom:5px}
+  .p-sheet .f b{display:block;font-size:8.4pt}
+  .p-sheet .f code{display:block;direction:ltr;text-align:left;font-family:var(--mono);font-size:8pt;margin:1px 0}
+  .p-sheet .f small{color:#666;font-size:7.2pt}
 }
 </style>
 </head>
@@ -186,43 +215,72 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
       <button class="tab" role="tab" data-view="study" aria-selected="true">مراجعة</button>
       <button class="tab" role="tab" data-view="exam" aria-selected="false">اختبار</button>
       <button class="tab" role="tab" data-view="report" aria-selected="false">النتيجة</button>
+      <button class="tab" role="tab" data-view="sheet" aria-selected="false">ورقة القوانين</button>
     </nav>
   </div>
 </header>
 
+<!-- ================= STUDY ================= -->
 <main class="wrap view" id="v-study">
   <div class="grid-2">
     <aside class="card side">
       <section><h3>الفصل</h3><select id="s-chapter"></select></section>
       <section><h3>الموضوع الفرعي</h3><select id="s-sub"></select></section>
-      <section><label class="sw"><input type="checkbox" id="s-reveal"> إظهار الإجابة والشرح مباشرة</label></section>
       <section>
+        <h3>عرض</h3>
+        <div class="chips" id="s-mode">
+          <button class="chip" data-m="one" aria-pressed="true">سؤال سؤال</button>
+          <button class="chip" data-m="all" aria-pressed="false">عرض الكل</button>
+        </div>
+      </section>
+      <section>
+        <h3>نطاق</h3>
+        <div class="chips" id="s-scope">
+          <button class="chip" data-s="all" aria-pressed="true">الكل</button>
+          <button class="chip" data-s="box">صندوق المراجعة</button>
+          <button class="chip" data-s="wrong">أخطائي</button>
+        </div>
+      </section>
+      <section>
+        <label class="sw"><input type="checkbox" id="s-reveal"> إظهار الإجابة والشرح مباشرة</label>
+        <div class="rowbar" style="margin-top:12px">
+          <button class="btn btn-sm" id="s-reset">تصفير إجابات المراجعة</button>
+        </div>
+      </section>
+      <section id="s-gridwrap">
         <h3>الأسئلة <span id="s-count" style="font-family:var(--mono)"></span></h3>
         <div class="qgrid" id="s-grid"></div>
       </section>
     </aside>
     <div>
-      <div class="card pad" id="s-card"></div>
-      <div class="rowbar">
+      <div id="s-card"></div>
+      <div class="rowbar" id="s-nav">
         <button class="btn" id="s-prev">← السابق</button>
         <button class="btn" id="s-next">التالي →</button>
         <span class="spacer"></span>
         <span class="eyebrow" id="s-pos"></span>
       </div>
+      <p class="eyebrow" style="margin-top:14px">اختصارات: A–E للإجابة · ← → للتنقل</p>
     </div>
   </div>
 </main>
 
+<!-- ================= EXAM ================= -->
 <main class="view" id="v-exam" hidden>
   <div class="wrap" id="e-setup">
-    <div class="card pad" style="max-width:660px;margin:0 auto">
+    <div class="card pad" style="max-width:680px;margin:0 auto">
       <p class="eyebrow">إعداد الاختبار</p>
       <h2 style="margin:6px 0 4px">جهّز اختبارك</h2>
       <p style="color:var(--muted);margin:0 0 20px;font-size:14px">الأسئلة تظهر كلها دفعة واحدة بدون إجابات. النتيجة والتشخيص يظهران بعد الإنهاء.</p>
-      <h3 style="font-size:13px;color:var(--muted);margin-bottom:9px">الفصول المشمولة</h3>
+
+      <h3 style="font-size:13px;color:var(--muted);margin-bottom:9px">مصدر الأسئلة</h3>
+      <div class="chips" id="e-source"></div>
+      <h3 style="font-size:13px;color:var(--muted);margin:20px 0 9px">الفصول المشمولة</h3>
       <div class="chips" id="e-chapters"></div>
       <h3 style="font-size:13px;color:var(--muted);margin:20px 0 9px">عدد الأسئلة</h3>
       <div class="chips" id="e-counts"></div>
+      <h3 style="font-size:13px;color:var(--muted);margin:20px 0 9px">المدة</h3>
+      <div class="chips" id="e-times"></div>
       <div style="margin-top:20px;display:flex;flex-direction:column;gap:9px">
         <label class="sw"><input type="checkbox" id="e-shuffleQ" checked> ترتيب عشوائي للأسئلة</label>
         <label class="sw"><input type="checkbox" id="e-shuffleO"> ترتيب عشوائي للخيارات</label>
@@ -237,21 +295,21 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   <div id="e-run" hidden>
     <div class="stickybar">
       <div class="in">
-        <strong style="font-size:14px">الاختبار جارٍ</strong>
+        <span class="pill clock" id="e-clock" hidden></span>
         <span class="pill" id="e-progtext"></span>
         <span class="pill" id="e-left"></span>
-        <div class="progress" style="flex:1;min-width:90px"><i id="e-progbar" style="width:0%"></i></div>
-        <button class="btn" id="e-toggle">لوحة الأسئلة</button>
-        <button class="btn btn-ghost" id="e-cancel">إلغاء</button>
-        <button class="btn btn-primary" id="e-finish">إنهاء وعرض النتيجة</button>
+        <div class="progress" style="flex:1;min-width:80px"><i id="e-progbar" style="width:0%"></i></div>
+        <button class="btn btn-sm" id="e-toggle">لوحة الأسئلة</button>
+        <button class="btn btn-sm btn-ghost" id="e-cancel">إلغاء</button>
+        <button class="btn btn-sm btn-primary" id="e-finish">إنهاء وعرض النتيجة</button>
       </div>
       <div class="navpanel" id="e-nav" hidden>
         <div class="card pad">
           <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
             <h3 style="font-size:13px;color:var(--muted)">اضغط أي رقم للانتقال إليه</h3>
             <span class="spacer"></span>
-            <span style="font-size:12.5px;color:var(--muted)">■ مجاب &nbsp;·&nbsp; ▢ غير مجاب</span>
-            <button class="btn" id="e-jump">اذهب لأول سؤال غير مجاب</button>
+            <span style="font-size:12.5px;color:var(--muted)">■ مجاب · ▢ غير مجاب</span>
+            <button class="btn btn-sm" id="e-jump">اذهب لأول سؤال غير مجاب</button>
           </div>
           <div class="qgrid" id="e-grid"></div>
         </div>
@@ -264,7 +322,12 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   </div>
 </main>
 
+<!-- ================= REPORT ================= -->
 <main class="wrap view" id="v-report" hidden></main>
+
+<!-- ================= FORMULA SHEET ================= -->
+<main class="wrap view" id="v-sheet" hidden></main>
+
 <div id="printArea"></div>
 
 <script id="qdata" type="application/json">[
@@ -273,7 +336,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. A cost that can be avoided by choosing one alternative over another is relevant for\ndecision purposes.\n2. It may be a good decision to replace an asset before its original cost has been fully\nrecovered through increased revenues or decreased costs.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -301,7 +364,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. Sunk costs are never relevant in decision making.\n2. Sunk costs and future costs that do not differ between the alternatives may or may not\nbe relevant in a decision.\n3. Fixed costs are sunk costs.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement III is true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -329,7 +392,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. Future costs that do not differ between the alternatives in a decision are avoidable\ncosts.\n2. A cost that is traceable to a segment through activity-based costing is always an\navoidable cost for decision making.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -357,7 +420,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. Consistency demands that a cost that is relevant in one decision be regarded as\nrelevant in other decisions as well.\n2. Variable costs are always relevant costs in decisions.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -385,7 +448,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. A cost that is assigned to a product using activity-based costing may or may not be a\nrelevant cost in a decision involving that product.\n2. Opportunity costs represent costs that can be reduced by effective management of\noperations.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -413,7 +476,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. Future costs that do differ among the alternatives are not relevant in a decision.\n2. Sunk costs are costs that have proven to be unproductive.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -441,7 +504,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. Fixed costs may be relevant in a decision.\n2. Avoidable costs are irrelevant costs in decisions.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -469,10 +532,10 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. The book value of an old machine is always considered an opportunity cost in a\ndecision.\n2. A cost that will be incurred regardless of which alternative is selected is not relevant\nwhen choosing between the alternatives.\n3. A complete income statement need not be prepared as part of a differential cost\nanalysis.\n4. An avoidable cost is a sunk cost that can be eliminated (in whole or in part) as a result\nof choosing one alternative over another.",
   "options": {
-   "A": "Both statementsI and II are true.",
+   "A": "Both statements I and II are true.",
    "B": "Both statements II and III are true.",
-   "C": "Both statements II andIV are true.",
-   "D": "Both statementsI and III are true."
+   "C": "Both statements II and IV are true.",
+   "D": "Both statements I and III are true."
   },
   "answer": "B",
   "sub": "التكاليف الملائمة والغارقة",
@@ -497,10 +560,10 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. The variable costs of a product are relevant in a decision concerning whether to\neliminate the product.\n2. Fixed costs are irrelevant in decisions about whether a product should be dropped.\n3. A product whose revenues do not cover its variable costs and its traceable fixed costs\nshould usually be dropped.\n4. In a decision to drop a product, the product should be charged for rent in proportion\nto the space it occupies even if the space has no alternative use and the rental payment\nis unavoidable.",
   "options": {
-   "A": "Both statementsI and II are true.",
+   "A": "Both statements I and II are true.",
    "B": "Both statements II and III are true.",
-   "C": "Both statements II andIV are true.",
-   "D": "Both statementsI and III are true."
+   "C": "Both statements II and IV are true.",
+   "D": "Both statements I and III are true."
   },
   "answer": "D",
   "sub": "إيقاف منتج/قطاع",
@@ -525,7 +588,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. When a company is involved in more than one activity in the entire value chain, it is\nvertically integrated.\n2. A vertically integrated company is less dependent on its suppliers than a company\nthat is not vertically integrated.\n3. A disadvantage of vertical integration is that by pooling demand for parts from a\nnumber of companies, a supplier may be able to enjoy economies of scale that result\nin higher quality and lower cost than if every company makes its own parts.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement III is true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -553,7 +616,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. In a special order situation that involves using capacity that is not idle, opportunity\ncosts are zero.\n2. In a special order situation, any fixed cost associated with the order would be\nirrelevant.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -581,7 +644,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. When a company has a production constraint, total contribution margin will be\nmaximized by emphasizing the products with the highest contribution margin per unit\nof the constrained resource.\n2. When a company has a production constraint, the product with the lowest\ncontribution margin per unit of the constrained resource should usually be given\nhighest priority.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -609,7 +672,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. In a factory operating at capacity, every machine and person should be working at the\nmaximum possible rate.\n2. One way to increase the effective utilization of a bottleneck is to reduce the number\nof defective units.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -637,7 +700,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. Eliminating nonproductive processing time is particularly important in a bottleneck\noperation.\n2. Payment of overtime to a worker in order to relax a production constraint could\nincrease the profits of a company.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -665,7 +728,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. The term joint cost is used to describe the costs incurred up to the split-off point in a\nprocess involving joint products.\n2. The split-off point in a process that produces joint products is the point in the\nmanufacturing process at which the joint products can be recognized as separate\nproducts.\n3. Two or more products that are produced from a common input are known as joint\nproducts.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement III is true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -693,7 +756,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Differential Analysis",
   "stem": "Which of the following statements is true?\n1. An avoidable fixed production cost incurred before the split-off point in a joint\nprocess is relevant in a sell or process further decision.\n2. It is profitable to continue processing joint products after the split-off point if their\ntotal revenues exceed the joint costs.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -1036,7 +1099,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
    "A": "Only I",
    "B": "Only III",
    "C": "Only I and II",
-   "D": "OnlyI and III"
+   "D": "Only I and III"
   },
   "answer": "A",
   "sub": "المنتجات المشتركة",
@@ -1063,8 +1126,8 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "options": {
    "A": "I, II, and IV.",
    "B": "I, II, III, and IV.",
-   "C": "II, III, andV.",
-   "D": "I one, II, III, and V five."
+   "C": "II, III, and V.",
+   "D": "I, II, III, and V."
   },
   "answer": "B",
   "sub": "المنتجات المشتركة",
@@ -2496,7 +2559,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Master Budget",
   "stem": "Which of the following statements is true?\n1. Budgets are used for the distinct purposes of planning and profit.\n2. Control involves developing goals and preparing various budgets to achieve those\ngoals.\n3. A continuous or perpetual budget is a 12-month budget that rolls forward one month\n(or quarter) as the current month (or quarter) is completed.",
   "options": {
-   "A": "Only statement1one is true.",
+   "A": "Only statement 1 is true.",
    "B": "Only statement 3 is true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -2524,7 +2587,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Master Budget",
   "stem": "Which of the following statements is true?\n1. The budgeted income statement is typically prepared before the budgeted balance\nsheet.\n2. The cash budget is the starting point in preparing the master budget.\n3. The production budget is typically prepared prior to the sales budget.",
   "options": {
-   "A": "Only statement1one is true.",
+   "A": "Only statement 1 is true.",
    "B": "Only statement 3 is true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -2580,7 +2643,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Master Budget",
   "stem": "Which of the following statements is true?\n1. A benefit from budgeting is that it forces managers to think about and plan for the\nfuture.\n2. One of the weaknesses of budgets is that they are of little value in uncovering\npotential bottlenecks.\n3. One disadvantage of budgeting is that budgeting makes it more difficult to coordinate\nthe plans and activities of departmental managers.",
   "options": {
-   "A": "Only statement 1one is true.",
+   "A": "Only statement 1 is true.",
    "B": "Only statement 2 is true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -2608,7 +2671,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Master Budget",
   "stem": "Which of the following statements is true?\n1. Cash collections in a schedule of cash collections typically consist of collections on\nsales made to customers in prior periods plus collections on sales made in the current\nbudget period.\n2. The number of units to be produced in a period can be determined by adding the\nexpected sales to the desired ending inventory and then deducting the beginning\ninventory.",
   "options": {
-   "A": "Only statement 1one is true.",
+   "A": "Only statement 1 is true.",
    "B": "Only statement 2 is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -2636,7 +2699,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Master Budget",
   "stem": "Which of the following statements is true?\n1. In a production budget, if the number of units in finished goods inventory at the end\nof the period is less than the number of units in finished goods inventory at the\nbeginning of the period, then the expected number of units sold is less than the\nnumber of units to be produced during the period.\n2. In the merchandise purchases budget, the required purchases (in units) for a period\ncan be determined by subtracting the beginning merchandise inventory (in units) from\nthe budgeted sales (in units) and desired ending merchandise inventory (in units).\n3. When preparing a direct materials budget, beginning inventory for raw materials\nshould be added to production needs, and desired ending inventory should be\nsubtracted to determine the amount of raw materials to be purchased.",
   "options": {
-   "A": "Only statement1one is true.",
+   "A": "Only statement 1 is true.",
    "B": "Only statement 2 is true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -2664,7 +2727,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Master Budget",
   "stem": "Which of the following statements is true?\n1. The direct labor budget begins with the required production in units from the\nproduction budget.\n2. The direct labor budget shows the direct labor-hours required to satisfy the production\nbudget.",
   "options": {
-   "A": "Only statement1one is true.",
+   "A": "Only statement 1 is true.",
    "B": "Only statement 2 is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -2692,7 +2755,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Master Budget",
   "stem": "Which of the following statements is true?\n1. In the manufacturing overhead budget, the non-cash charges (such as depreciation)\nare deducted from the total budgeted manufacturing overhead to determine the\nexpected cash disbursements for manufacturing overhead.\n2. The manufacturing overhead budget lists all costs of production other than direct\nmaterials and direct labor.",
   "options": {
-   "A": "Only statement1one is true.",
+   "A": "Only statement 1 is true.",
    "B": "Only statement 2 is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -5203,7 +5266,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Strategic Performance",
   "stem": "Which of the following statements is true?\n1. Move time is considered non-value-added time.\n2. If the MCE is equal to 0.6, then 60% of the time a unit is in process is spent on\nactivities that add value to the product.\n3. A manager would like to see a trend indicating a decrease in setup time.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Both statements II and III are true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -5231,7 +5294,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Strategic Performance",
   "stem": "Which of the following statements is true?\n1. Throughput time is the amount of time required to move a completed unit from the\nfactory floor to the warehouse.\n2. A manufacturing cycle efficiency (MCE) ratio of less than 1.00 is desirable because\nthis is the ratio of non-value-added time to throughput time.\n3. A manufacturing cycle efficiency (MCE) of less than one is impossible.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Both statements II and III are true.",
    "C": "All of the statements are true.",
    "D": "None of the statements are true."
@@ -5259,7 +5322,7 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
   "topic": "Strategic Performance",
   "stem": "Which of the following statements is true?\n1. Queue time is considered non-value-added time.\n2. Inspection Time is generally considered to be value-added time.",
   "options": {
-   "A": "Only statementI is true.",
+   "A": "Only statement I is true.",
    "B": "Only statement II is true.",
    "C": "Both statements are true.",
    "D": "Neither statement is true."
@@ -5682,54 +5745,85 @@ label.sw input{width:17px;height:17px;accent-color:var(--accent)}
 ]</script>
 <script>
 const QS = JSON.parse(document.getElementById('qdata').textContent);
+const BYID = Object.fromEntries(QS.map(q=>[q.id,q]));
 const LTRS = ['A','B','C','D','E'];
 const CHAPTERS = [...new Set(QS.map(q=>q.chapter))];
-const esc = s => String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const $ = s => document.querySelector(s);
 const isNum = c => /^[($]?[\d]/.test(c);
+const MASTERY = 2;   // correct answers in a row before a question leaves the review box
+
+/* ---------- storage ---------- */
+const KEY = 'acc520-selftest-v1';
+let STORAGE_OK = true;
+function load(){
+  try{ return JSON.parse(localStorage.getItem(KEY)) || {}; }
+  catch(e){ STORAGE_OK = false; return {}; }
+}
+let DB = Object.assign({picks:{}, box:{}, history:[]}, load());
+function save(){
+  try{ localStorage.setItem(KEY, JSON.stringify(DB)); }
+  catch(e){ STORAGE_OK = false; }
+}
+/* streak bookkeeping: a question sits in the review box until answered right MASTERY times running */
+function record(id, ok){
+  const cur = DB.box[id];
+  if(!ok) DB.box[id] = 0;                                   // a miss puts the question in the box
+  else DB.box[id] = Math.min(cur === undefined ? MASTERY : cur + 1, MASTERY);
+  save();
+}
+const inBox = id => DB.box[id] !== undefined && DB.box[id] < MASTERY;
+const boxIds = () => QS.filter(q=>inBox(q.id)).map(q=>q.id);
+const lastWrongIds = () => {
+  const h = DB.history[DB.history.length-1];
+  return h ? h.wrong.slice() : [];
+};
 
 /* ---------- shared rendering ---------- */
-function tableHTML(b, cls){
+function tableHTML(b){
   const hasHdr = b.headers.some(h=>h);
-  return `<table class="${cls||'matrix'}">` +
+  return `<table class="matrix">` +
     (hasHdr ? `<thead><tr>${b.headers.map(h=>`<th>${esc(h)}</th>`).join('')}</tr></thead>` : '') +
     `<tbody>${b.rows.map(r=>`<tr>${r.map((c,i)=>
       `<td class="${i&&isNum(c)?'n':''}">${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
 }
-function bodyHTML(q){
-  return q.blocks.map(b => b.t==='p'
-    ? (b.v.trim() ? `<div class="stem">${esc(b.v)}</div>` : '')
-    : tableHTML(b)).join('');
-}
+const bodyHTML = q => q.blocks.map(b => b.t==='p'
+  ? (b.v.trim() ? `<div class="stem">${esc(b.v)}</div>` : '')
+  : tableHTML(b)).join('');
 function headHTML(q, extra=''){
+  const flag = q.refEn.startsWith('Not covered')
+    ? '<span class="tag flag">خارج شرائح المنهج</span>' : '';
   return `<div class="qhead"><span class="qnum">Q${q.id}</span>
-    <span class="tag">${esc(q.chapter)}</span>
-    <span class="tag">${esc(q.sub)}</span>${extra}</div>`;
+    <span class="tag">${esc(q.chapter)}</span><span class="tag">${esc(q.sub)}</span>${flag}${extra}</div>`;
 }
-function explHTML(q){
-  return `<p class="ex-en" dir="ltr">${esc(q.explEn)}</p>
-    <p class="ex-ar">${esc(q.expl)}</p>
-    <div class="srcline"><b>الموقع في المنهج:</b> ${esc(q.meeting)} · ${esc(q.chapter)} · ${esc(q.ref)}
-      <br><span class="en">${esc(q.chapterEn)} · ${esc(q.refEn)}</span></div>`;
-}
+const explHTML = q => `<p class="ex-en" dir="ltr">${esc(q.explEn)}</p>
+  <p class="ex-ar">${esc(q.expl)}</p>
+  <div class="srcline"><b>الموقع في المنهج:</b> ${esc(q.meeting)} · ${esc(q.chapter)} · ${esc(q.ref)}
+    <br><span class="en">${esc(q.chapterEn)} · ${esc(q.refEn)}</span></div>`;
 const optionOrder = (q, sh) => {
   const k = LTRS.filter(l => q.options[l] !== undefined);
   return sh ? k.slice().sort(()=>Math.random()-0.5) : k;
 };
+const level = p => p<50 ? ['weak','ضعيف','Weak'] : p<80 ? ['mid','متوسط','Moderate'] : ['good','جيد','Good'];
 
+let VIEW = 'study';
 document.querySelectorAll('.tab').forEach(t => t.onclick = () => showView(t.dataset.view));
 function showView(v){
+  VIEW = v;
   document.querySelectorAll('.tab').forEach(t=>t.setAttribute('aria-selected', String(t.dataset.view===v)));
-  ['study','exam','report'].forEach(x=>$('#v-'+x).hidden = (x!==v));
+  ['study','exam','report','sheet'].forEach(x=>$('#v-'+x).hidden = (x!==v));
   window.scrollTo(0,0);
 }
 
-/* ---------- STUDY ---------- */
-const S = { list: [], i: 0, picks: {} };
-const studyPool = () => {
+/* ================= STUDY ================= */
+const S = { list: [], i: 0, mode: 'one', scope: 'all' };
+function studyPool(){
   const ch = $('#s-chapter').value, sub = $('#s-sub').value;
-  return QS.filter(q => (ch==='*'||q.chapter===ch) && (sub==='*'||q.sub===sub));
-};
+  let pool = QS.filter(q => (ch==='*'||q.chapter===ch) && (sub==='*'||q.sub===sub));
+  if(S.scope==='box')   pool = pool.filter(q=>inBox(q.id));
+  if(S.scope==='wrong') { const w = new Set(lastWrongIds()); pool = pool.filter(q=>w.has(q.id)); }
+  return pool;
+}
 function fillChapterSelect(){
   $('#s-chapter').innerHTML = `<option value="*">كل الفصول (${QS.length})</option>` +
     CHAPTERS.map(c=>`<option value="${esc(c)}">${esc(c)} (${QS.filter(q=>q.chapter===c).length})</option>`).join('');
@@ -5744,56 +5838,110 @@ function fillSubSelect(){
 function studyRefresh(){
   S.list = studyPool(); S.i = 0;
   $('#s-count').textContent = `(${S.list.length})`;
+  $('#s-gridwrap').hidden = S.mode==='all';
+  $('#s-nav').hidden = S.mode==='all';
   renderStudyGrid(); renderStudy();
 }
 function renderStudyGrid(){
+  if(S.mode==='all') return;
   $('#s-grid').innerHTML = S.list.map((q,idx)=>{
-    const p = S.picks[q.id];
+    const p = DB.picks[q.id];
     return `<button class="${p?(p===q.answer?'g-ok':'g-no'):''}" data-i="${idx}" ${idx===S.i?'aria-current="true"':''}>${q.id}</button>`;
   }).join('');
   $('#s-grid').querySelectorAll('button').forEach(b=>{
     b.onclick = () => { S.i = +b.dataset.i; renderStudyGrid(); renderStudy(); };
   });
 }
-function renderStudy(){
-  const box = $('#s-card');
-  if(!S.list.length){ box.innerHTML='<div class="empty"><b>لا توجد أسئلة بهذا الفلتر</b>غيّر الفصل أو الموضوع الفرعي.</div>'; $('#s-pos').textContent=''; return; }
-  const q = S.list[S.i], reveal = $('#s-reveal').checked, pick = S.picks[q.id];
-  const shown = reveal || !!pick;
-
+function studyCard(q, reveal){
+  const pick = DB.picks[q.id], shown = reveal || !!pick;
   const opts = optionOrder(q,false).map(l=>{
     let cls='opt', mark='';
     if(shown && l===q.answer){ cls+=' is-ok'; mark='<span class="mark">الإجابة الصحيحة</span>'; }
     else if(pick===l){ cls+=' is-no'; mark='<span class="mark">اختيارك</span>'; }
-    return `<li><button class="${cls}" data-l="${l}" ${shown?'disabled':''}>
+    return `<li><button class="${cls}" data-q="${q.id}" data-l="${l}" ${shown?'disabled':''}>
       <span class="ltr">${l}</span><span class="txt">${esc(q.options[l])}</span>${mark}</button></li>`;
   }).join('');
-
   let verdict = '';
   if(shown){
     const state = !pick ? 'neutral' : (pick===q.answer ? 'ok' : 'no');
-    const title = !pick ? `الإجابة الصحيحة: ${q.answer}` : (pick===q.answer ? '✓ إجابة صحيحة' : `✕ إجابة خاطئة — الصحيح ${q.answer}`);
+    const title = !pick ? `الإجابة الصحيحة: ${q.answer}`
+      : (pick===q.answer ? '✓ إجابة صحيحة' : `✕ إجابة خاطئة — الصحيح ${q.answer}`);
     verdict = `<div class="verdict ${state}"><h3>${title}</h3>${explHTML(q)}</div>`;
   }
-  box.innerHTML = headHTML(q) + bodyHTML(q) + `<ul class="opts">${opts}</ul>` + verdict;
+  return `<div class="card pad" id="sq-${q.id}" style="margin-bottom:14px">
+    ${headHTML(q)}${bodyHTML(q)}<ul class="opts">${opts}</ul>${verdict}</div>`;
+}
+function renderStudy(){
+  const box = $('#s-card'), reveal = $('#s-reveal').checked;
+  if(!S.list.length){
+    box.innerHTML = `<div class="card"><div class="empty"><b>لا توجد أسئلة بهذا الاختيار</b>${
+      S.scope==='box' ? 'صندوق المراجعة فارغ — يمتلئ بالأسئلة التي تخطئ فيها.' :
+      S.scope==='wrong' ? 'لا توجد أخطاء من آخر اختبار.' : 'غيّر الفصل أو الموضوع الفرعي.'}</div></div>`;
+    $('#s-pos').textContent=''; return;
+  }
+  box.innerHTML = S.mode==='all'
+    ? S.list.map(q=>studyCard(q,reveal)).join('')
+    : studyCard(S.list[S.i], reveal);
   box.querySelectorAll('.opt').forEach(b=>{
-    b.onclick = () => { S.picks[q.id]=b.dataset.l; renderStudyGrid(); renderStudy(); };
+    b.onclick = () => answerStudy(+b.dataset.q, b.dataset.l);
   });
-  $('#s-pos').textContent = `${S.i+1} / ${S.list.length}`;
-  $('#s-prev').disabled = S.i===0;
-  $('#s-next').disabled = S.i===S.list.length-1;
+  if(S.mode==='one'){
+    $('#s-pos').textContent = `${S.i+1} / ${S.list.length}`;
+    $('#s-prev').disabled = S.i===0;
+    $('#s-next').disabled = S.i===S.list.length-1;
+  }
+}
+function answerStudy(id, letter){
+  DB.picks[id] = letter; save();
+  record(id, letter === BYID[id].answer);
+  const keep = S.mode==='all' ? window.scrollY : 0;
+  renderStudyGrid(); renderStudy();
+  if(S.mode==='all') window.scrollTo(0, keep);
 }
 $('#s-chapter').onchange = () => { fillSubSelect(); studyRefresh(); };
 $('#s-sub').onchange = studyRefresh;
 $('#s-reveal').onchange = renderStudy;
 $('#s-prev').onclick = () => { if(S.i>0){S.i--;renderStudyGrid();renderStudy();window.scrollTo(0,0);} };
 $('#s-next').onclick = () => { if(S.i<S.list.length-1){S.i++;renderStudyGrid();renderStudy();window.scrollTo(0,0);} };
+$('#s-reset').onclick = () => {
+  if(!confirm('تصفير إجابات المراجعة وصندوق المراجعة؟')) return;
+  DB.picks = {}; DB.box = {}; save(); studyRefresh();
+};
+$('#s-mode').querySelectorAll('.chip').forEach(b=>{
+  b.onclick = () => {
+    S.mode = b.dataset.m;
+    $('#s-mode').querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed', String(x.dataset.m===S.mode)));
+    studyRefresh();
+  };
+});
+$('#s-scope').querySelectorAll('.chip').forEach(b=>{
+  b.onclick = () => {
+    S.scope = b.dataset.s;
+    $('#s-scope').querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed', String(x.dataset.s===S.scope)));
+    studyRefresh();
+  };
+});
 
-/* ---------- EXAM ---------- */
-const E = { chapters: new Set(CHAPTERS), count: 'all', list: [], order: {}, answers: {} };
-const examPool = () => QS.filter(q => E.chapters.has(q.chapter));
+/* ================= EXAM ================= */
+const E = { chapters:new Set(CHAPTERS), count:'all', source:'all', minutes:0,
+            list:[], order:{}, answers:{}, endsAt:0, timer:null };
+
+function sourcePool(){
+  if(E.source==='box')   return QS.filter(q=>inBox(q.id));
+  if(E.source==='wrong'){ const w=new Set(lastWrongIds()); return QS.filter(q=>w.has(q.id)); }
+  return QS;
+}
+const examPool = () => sourcePool().filter(q => E.chapters.has(q.chapter));
 
 function renderExamSetup(){
+  const src = [['all','كل الأسئلة',QS.length],
+               ['wrong','أخطاء آخر اختبار',lastWrongIds().length],
+               ['box','صندوق المراجعة',boxIds().length]];
+  $('#e-source').innerHTML = src.map(([v,l,n])=>
+    `<button class="chip" data-v="${v}" aria-pressed="${E.source===v}" ${n?'':'disabled'}>${l} (${n})</button>`).join('');
+  $('#e-source').querySelectorAll('.chip').forEach(b=>{
+    b.onclick = () => { E.source = b.dataset.v; renderExamSetup(); };
+  });
   $('#e-chapters').innerHTML = CHAPTERS.map(c=>
     `<button class="chip" data-c="${esc(c)}" aria-pressed="${E.chapters.has(c)}">${esc(c)}</button>`).join('');
   $('#e-chapters').querySelectorAll('.chip').forEach(b=>{
@@ -5803,13 +5951,18 @@ function renderExamSetup(){
       renderExamSetup();
     };
   });
-  const opts=[['all','الكل'],[25,'25'],[50,'50'],[75,'75']];
-  $('#e-counts').innerHTML = opts.map(([v,l])=>
+  $('#e-counts').innerHTML = [['all','الكل'],[25,'25'],[50,'50'],[75,'75']].map(([v,l])=>
     `<button class="chip" data-n="${v}" aria-pressed="${String(E.count)===String(v)}">${l}</button>`).join('');
   $('#e-counts').querySelectorAll('.chip').forEach(b=>{
     b.onclick = () => { E.count = b.dataset.n==='all'?'all':+b.dataset.n; renderExamSetup(); };
   });
+  $('#e-times').innerHTML = [[0,'بدون مؤقّت'],[30,'30 د'],[60,'60 د'],[90,'90 د'],[120,'120 د']].map(([v,l])=>
+    `<button class="chip" data-t="${v}" aria-pressed="${E.minutes===v}">${l}</button>`).join('');
+  $('#e-times').querySelectorAll('.chip').forEach(b=>{
+    b.onclick = () => { E.minutes = +b.dataset.t; renderExamSetup(); };
+  });
   $('#e-pool').textContent = `المتاح: ${examPool().length} سؤال`;
+  $('#e-start').disabled = examPool().length===0;
 }
 $('#e-start').onclick = () => {
   let pool = examPool().slice();
@@ -5820,11 +5973,31 @@ $('#e-start').onclick = () => {
   const sh = $('#e-shuffleO').checked;
   pool.forEach(q => E.order[q.id] = optionOrder(q, sh));
   $('#e-setup').hidden = true; $('#e-run').hidden = false; $('#e-nav').hidden = true;
-  renderExamList(); updateExam(); window.scrollTo(0,0);
+  startTimer(); renderExamList(); updateExam(); window.scrollTo(0,0);
 };
+function startTimer(){
+  clearInterval(E.timer);
+  const clock = $('#e-clock');
+  if(!E.minutes){ clock.hidden = true; return; }
+  clock.hidden = false;
+  E.endsAt = Date.now() + E.minutes*60000;
+  const tick = () => {
+    const ms = E.endsAt - Date.now();
+    if(ms <= 0){
+      clearInterval(E.timer); clock.textContent = '00:00';
+      alert('انتهى الوقت. سيتم عرض النتيجة الآن.');
+      finishExam(true); return;
+    }
+    const m = Math.floor(ms/60000), s = Math.floor(ms%60000/1000);
+    clock.textContent = String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    clock.classList.toggle('low', ms < 5*60000);
+  };
+  tick(); E.timer = setInterval(tick, 1000);
+}
 $('#e-cancel').onclick = () => {
   if(!confirm('إلغاء الاختبار الحالي؟ ستفقد إجاباتك.')) return;
-  $('#e-run').hidden = true; $('#e-setup').hidden = false;
+  clearInterval(E.timer);
+  $('#e-run').hidden = true; $('#e-setup').hidden = false; renderExamSetup();
 };
 $('#e-toggle').onclick = () => { $('#e-nav').hidden = !$('#e-nav').hidden; };
 $('#e-jump').onclick = () => {
@@ -5836,19 +6009,19 @@ function renderExamList(){
     const opts = E.order[q.id].map(l=>
       `<li><button class="opt" data-q="${q.id}" data-l="${l}">
         <span class="ltr">${l}</span><span class="txt">${esc(q.options[l])}</span></button></li>`).join('');
-    return `<div class="card pad exam-q" id="eq-${q.id}">
+    return `<div class="card pad exam-q" id="eq-${q.id}" data-id="${q.id}">
       ${headHTML(q, `<span class="tag" style="margin-inline-start:auto">${idx+1} من ${E.list.length}</span>`)}
       ${bodyHTML(q)}<ul class="opts">${opts}</ul></div>`;
   }).join('');
   $('#e-list').querySelectorAll('.opt').forEach(b=>{
-    b.onclick = () => {
-      const id = +b.dataset.q;
-      E.answers[id] = b.dataset.l;
-      document.querySelectorAll('#eq-'+id+' .opt').forEach(x=>x.classList.remove('is-picked'));
-      b.classList.add('is-picked');
-      updateExam();
-    };
+    b.onclick = () => pickExam(+b.dataset.q, b.dataset.l);
   });
+}
+function pickExam(id, letter){
+  E.answers[id] = letter;
+  document.querySelectorAll('#eq-'+id+' .opt').forEach(x=>
+    x.classList.toggle('is-picked', x.dataset.l===letter));
+  updateExam();
 }
 function updateExam(){
   const total = E.list.length, done = E.list.filter(q=>E.answers[q.id]).length, left = total-done;
@@ -5857,26 +6030,32 @@ function updateExam(){
   $('#e-left').className = 'pill' + (left ? ' alert' : '');
   $('#e-progbar').style.width = (total ? done/total*100 : 0) + '%';
   $('#e-grid').innerHTML = E.list.map((q,idx)=>
-    `<button class="${E.answers[q.id]?'g-done':'g-todo'}" data-id="${q.id}" title="سؤال ${idx+1}">${idx+1}</button>`).join('');
+    `<button class="${E.answers[q.id]?'g-done':'g-todo'}" data-id="${q.id}">${idx+1}</button>`).join('');
   $('#e-grid').querySelectorAll('button').forEach(b=>{
-    b.onclick = () => document.getElementById('eq-'+b.dataset.id).scrollIntoView({behavior:'smooth', block:'start'});
+    b.onclick = () => document.getElementById('eq-'+b.dataset.id).scrollIntoView({behavior:'smooth',block:'start'});
   });
 }
-$('#e-finish').onclick = $('#e-finish2').onclick = () => {
+function finishExam(force){
   const left = E.list.length - E.list.filter(q=>E.answers[q.id]).length;
-  if(left>0){
+  if(!force && left>0){
     $('#e-nav').hidden = false;
-    if(!confirm(`باقي ${left} سؤال بدون إجابة. إنهاء الاختبار الآن؟`)) { $('#e-jump').click(); return; }
+    if(!confirm(`باقي ${left} سؤال بدون إجابة. إنهاء الاختبار الآن؟`)){ $('#e-jump').click(); return; }
   }
+  clearInterval(E.timer);
   buildReport(); showView('report');
-};
+}
+$('#e-finish').onclick = $('#e-finish2').onclick = () => finishExam(false);
+function focusedExamQuestion(){
+  const cards = [...document.querySelectorAll('.exam-q')];
+  for(const c of cards){ if(c.getBoundingClientRect().bottom > 150) return +c.dataset.id; }
+  return null;
+}
 
-/* ---------- REPORT ---------- */
+/* ================= REPORT ================= */
 let LAST = null;
-const level = p => p<50 ? ['weak','ضعيف','Weak'] : p<80 ? ['mid','متوسط','Moderate'] : ['good','جيد','Good'];
-
 function buildReport(){
-  const rows = E.list.map(q => ({q, pick: E.answers[q.id]||null, ok: E.answers[q.id]===q.answer}));
+  const rows = E.list.map(q => ({q, pick:E.answers[q.id]||null, ok:E.answers[q.id]===q.answer}));
+  rows.forEach(r => record(r.q.id, r.ok));
   const correct = rows.filter(r=>r.ok).length;
   const blank = rows.filter(r=>!r.pick).length;
   const group = key => {
@@ -5884,17 +6063,21 @@ function buildReport(){
     rows.forEach(r=>{
       const k = r.q[key];
       m[k] = m[k] || {n:0, ok:0, chapter:r.q.chapter, chapterEn:r.q.chapterEn,
-                     nameEn: key==='sub'? r.q.subEn : r.q.chapterEn, refs:new Set()};
+                      nameEn: key==='sub'?r.q.subEn:r.q.chapterEn, refs:new Set()};
       m[k].n++; if(r.ok) m[k].ok++;
       m[k].refs.add(r.q.refEn);
     });
     return Object.entries(m).map(([k,v])=>({name:k, ...v, refs:[...v.refs].join('; '), pct:Math.round(v.ok/v.n*100)}));
   };
+  const bySub = group('sub').sort((a,b)=>a.pct-b.pct || b.n-a.n);
   LAST = {rows, correct, blank, wrong: rows.length-correct-blank,
           pct: rows.length?Math.round(correct/rows.length*100):0,
-          byChapter: group('chapter').sort((a,b)=>a.pct-b.pct),
-          bySub: group('sub').sort((a,b)=>a.pct-b.pct || b.n-a.n),
-          at: new Date()};
+          byChapter: group('chapter').sort((a,b)=>a.pct-b.pct), bySub, at:new Date()};
+  DB.history.push({at: LAST.at.toISOString(), n: rows.length, correct, pct: LAST.pct,
+                   wrong: rows.filter(r=>!r.ok).map(r=>r.q.id),
+                   subs: bySub.map(s=>({name:s.name, nameEn:s.nameEn, n:s.n, ok:s.ok}))});
+  DB.history = DB.history.slice(-30);
+  save();
   renderReport(); renderPrint();
 }
 function diagRow(r){
@@ -5904,10 +6087,43 @@ function diagRow(r){
     <div class="bar"><i class="b-${lv}" style="width:${r.pct}%"></i></div>
     <div class="pct lv-${lv}">${r.pct}%</div></div>`;
 }
+function historyHTML(){
+  if(DB.history.length < 1) return '';
+  const rows = DB.history.slice().reverse().slice(0,10).map(h=>{
+    const d = new Date(h.at).toLocaleString('ar-SA-u-nu-latn',{dateStyle:'short',timeStyle:'short'});
+    return `<tr><td>${esc(d)}</td><td class="m">${h.n}</td><td class="m">${h.correct}</td><td class="m">${h.pct}%</td></tr>`;
+  }).join('');
+  // per-topic trend: first recorded attempt vs latest
+  const agg = {};
+  DB.history.forEach((h,i)=> (h.subs||[]).forEach(s=>{
+    agg[s.name] = agg[s.name] || {nameEn:s.nameEn, first:null, last:null};
+    const pct = Math.round(s.ok/s.n*100);
+    if(agg[s.name].first===null) agg[s.name].first = pct;
+    agg[s.name].last = pct;
+  }));
+  const trend = Object.entries(agg).map(([k,v])=>({name:k, ...v, delta:v.last-v.first}))
+    .sort((a,b)=>a.last-b.last);
+  const trows = trend.map(t=>{
+    const d = t.delta, cls = d>0?'trend-up':(d<0?'trend-down':'');
+    return `<tr><td>${esc(t.name)}<br><span style="font-size:11.5px;color:var(--muted);direction:ltr;display:inline-block">${esc(t.nameEn)}</span></td>
+      <td class="m">${t.first}%</td><td class="m">${t.last}%</td>
+      <td class="m ${cls}">${d>0?'▲ +':(d<0?'▼ ':'')}${d===0?'—':d+'%'}</td></tr>`;
+  }).join('');
+  return `<div class="card pad" style="margin-bottom:16px">
+    <p class="eyebrow">سجل المحاولات وتتبّع التحسّن</p>
+    <table class="data" style="margin-top:10px">
+      <thead><tr><th>التاريخ</th><th>الأسئلة</th><th>صحيح</th><th>النسبة</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+    ${DB.history.length>1 ? `<p class="eyebrow" style="margin:20px 0 6px">التغيّر لكل موضوع (أول محاولة ← آخر محاولة)</p>
+      <table class="data"><thead><tr><th>الموضوع</th><th>أول</th><th>آخر</th><th>التغيّر</th></tr></thead>
+      <tbody>${trows}</tbody></table>` : ''}
+    ${STORAGE_OK ? '' : '<div class="notice">الحفظ التلقائي غير متاح في هذه المعاينة. عند نشر الملف (GitHub Pages مثلاً) يُحفظ تقدّمك في متصفحك تلقائياً.</div>'}
+  </div>`;
+}
 function renderReport(){
   const v = $('#v-report');
   if(!LAST){
-    v.innerHTML = `<div class="card"><div class="empty"><b>لا توجد نتيجة بعد</b>ابدأ اختباراً من تبويب «اختبار» وستظهر النتيجة والتشخيص هنا.</div></div>`;
+    v.innerHTML = `<div class="card" style="margin-bottom:16px"><div class="empty"><b>لا توجد نتيجة بعد</b>ابدأ اختباراً من تبويب «اختبار» وستظهر النتيجة والتشخيص هنا.</div></div>` + historyHTML();
     return;
   }
   const L = LAST;
@@ -5922,10 +6138,10 @@ function renderReport(){
     }).join('');
     const t = r.pick ? `✕ اخترت ${r.pick} — الصحيح ${q.answer}` : `— بدون إجابة — الصحيح ${q.answer}`;
     return `<div class="card pad" style="margin-bottom:12px">${headHTML(q)}${bodyHTML(q)}
-      <ul class="opts">${opts}</ul>
-      <div class="verdict no"><h3>${t}</h3>${explHTML(q)}</div></div>`;
+      <ul class="opts">${opts}</ul><div class="verdict no"><h3>${t}</h3>${explHTML(q)}</div></div>`;
   }).join('');
   const weakest = L.bySub.filter(r=>r.pct<80).slice(0,3);
+  const nWrong = L.rows.length - L.correct;
 
   v.innerHTML = `
   <div class="card pad" style="margin-bottom:16px">
@@ -5941,6 +6157,7 @@ function renderReport(){
       <span class="spacer"></span>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button class="btn btn-primary" id="r-print">تصدير PDF</button>
+        ${nWrong ? `<button class="btn" id="r-wrong">أعد الاختبار على أخطائي (${nWrong})</button>` : ''}
         <button class="btn" id="r-again">اختبار جديد</button>
       </div>
     </div>
@@ -5956,17 +6173,19 @@ function renderReport(){
     ${weakest.length ? `<div class="verdict neutral" style="margin-top:16px"><h3>ابدأ مراجعتك من هنا</h3>
       <p class="ex-ar" style="border:0;padding:0;margin:0">${weakest.map(w=>`<b>${esc(w.name)}</b> (${w.pct}%) — ${esc(w.refs)}`).join('<br>')}</p></div>` : ''}
   </div>
-  ${wrongCards ? `<p class="eyebrow" style="margin:22px 0 10px">مراجعة الأخطاء (${L.rows.length-L.correct})</p>${wrongCards}`
+  ${historyHTML()}
+  ${wrongCards ? `<p class="eyebrow" style="margin:22px 0 10px">مراجعة الأخطاء (${nWrong})</p>${wrongCards}`
     : `<div class="card"><div class="empty"><b>لا توجد أخطاء</b>إجابات كاملة الصحة في هذا الاختبار.</div></div>`}`;
-  $('#r-print').onclick = () => window.print();
-  $('#r-again').onclick = () => { $('#e-run').hidden=true; $('#e-setup').hidden=false; showView('exam'); };
+  $('#r-print').onclick = () => { renderPrint(); window.print(); };
+  $('#r-again').onclick = () => { $('#e-run').hidden=true; $('#e-setup').hidden=false; renderExamSetup(); showView('exam'); };
+  const rw = $('#r-wrong');
+  if(rw) rw.onclick = () => {
+    E.source='wrong'; E.count='all'; E.chapters=new Set(CHAPTERS);
+    $('#e-run').hidden=true; $('#e-setup').hidden=false; renderExamSetup(); showView('exam');
+  };
 }
-
-function printBody(q){
-  return q.blocks.map(b => b.t==='p'
-    ? (b.v.trim() ? `<div class="p-stem">${esc(b.v)}</div>` : '')
-    : tableHTML(b)).join('');
-}
+const printBody = q => q.blocks.map(b => b.t==='p'
+  ? (b.v.trim() ? `<div class="p-stem">${esc(b.v)}</div>` : '') : tableHTML(b)).join('');
 function renderPrint(){
   const L = LAST; if(!L) return;
   const dt = L.at.toLocaleString('en-GB',{dateStyle:'long',timeStyle:'short'});
@@ -5974,38 +6193,123 @@ function renderPrint(){
     `<table><thead><tr><th>${head}</th><th>Chapter</th><th>Where in the slides</th>
       <th>Q</th><th>Correct</th><th>Score</th><th>Level</th></tr></thead><tbody>` +
     rows.map(r=>`<tr><td>${esc(r.nameEn)}</td><td>${esc(r.chapterEn)}</td><td>${esc(r.refs)}</td>
-      <td>${r.n}</td><td>${r.ok}</td><td>${r.pct}%</td><td>${level(r.pct)[2]}</td></tr>`).join('') +
-    `</tbody></table>`;
-
+      <td>${r.n}</td><td>${r.ok}</td><td>${r.pct}%</td><td>${level(r.pct)[2]}</td></tr>`).join('') + `</tbody></table>`;
   const allQ = L.rows.map((r,i)=>{
-    const q = r.q;
-    const status = r.ok ? 'Correct' : (r.pick ? 'Wrong' : 'Not answered');
+    const q=r.q, status = r.ok ? 'Correct' : (r.pick ? 'Wrong' : 'Not answered');
     return `<div class="p-q ${r.ok?'good':'bad'}">
       <div class="p-qh">${i+1}. Q${q.id} — ${esc(q.subEn)} — ${status}</div>
       ${printBody(q)}
       <div class="p-ans">Your answer: ${r.pick ? esc(r.pick+') '+q.options[r.pick]) : '—'}</div>
       <div class="p-ans">Correct answer: ${esc(q.answer+') '+q.options[q.answer])}</div>
-      <div class="p-en">${esc(q.explEn)}</div>
-      <div class="p-ar">${esc(q.expl)}</div>
-      <div class="p-meta">${esc(q.chapterEn)} · ${esc(q.refEn)}</div>
-    </div>`;
+      <div class="p-en">${esc(q.explEn)}</div><div class="p-ar">${esc(q.expl)}</div>
+      <div class="p-meta">${esc(q.chapterEn)} · ${esc(q.refEn)}</div></div>`;
   }).join('');
-
   $('#printArea').innerHTML = `
-    <div class="p-head">
-      <h1>Managerial Accounting (ACC 520) — Self-Test Diagnostic Report</h1>
+    <div class="p-head"><h1>Managerial Accounting (ACC 520) — Self-Test Diagnostic Report</h1>
       <p>${esc(dt)} &nbsp;|&nbsp; Score: ${L.correct}/${L.rows.length} (${L.pct}%) &nbsp;|&nbsp;
-         Correct ${L.correct} &nbsp;·&nbsp; Wrong ${L.wrong} &nbsp;·&nbsp; Not answered ${L.blank}</p>
-    </div>
-    <div class="p-sec"><h2>1. Weak areas by topic (weakest first)</h2>
-      ${diagTable(L.bySub,'Topic')}</div>
-    <div class="p-sec"><h2>2. Performance by chapter</h2>
-      ${diagTable(L.byChapter,'Chapter')}</div>
+         Correct ${L.correct} &nbsp;·&nbsp; Wrong ${L.wrong} &nbsp;·&nbsp; Not answered ${L.blank}</p></div>
+    <div class="p-sec"><h2>1. Weak areas by topic (weakest first)</h2>${diagTable(L.bySub,'Topic')}</div>
+    <div class="p-sec"><h2>2. Performance by chapter</h2>${diagTable(L.byChapter,'Chapter')}</div>
     <div class="p-sec"><h2>3. All questions with explanations</h2>${allQ}</div>`;
 }
 
+/* ================= FORMULA SHEET ================= */
+const SHEET = [
+ {h:'Chapter 6 — Differential Analysis · التحليل التفاضلي', items:[
+  {t:'التكلفة الملائمة · Relevant cost', c:'Relevant = future AND differs between alternatives', s:'Slides 2–3',
+   n:'أي تكلفة لا تتحقق فيها الشرطان تُستبعد من التحليل.'},
+  {t:'التكلفة الغارقة · Sunk cost', c:'Already incurred → always irrelevant', s:'Slide 4',
+   n:'القيمة الدفترية وإهلاك المعدات الخاصة أمثلة دائمة.'},
+  {t:'تكلفة الفرصة البديلة · Opportunity cost', c:'Benefit forgone from the best alternative use', s:'Slides 5, 20',
+   n:'تساوي صفراً عند وجود طاقة فائضة بلا استخدام بديل.'},
+  {t:'الصنع أم الشراء · Make or Buy', c:'Avoidable cost of making  vs.  Purchase price + Opportunity cost', s:'Slides 15–19',
+   n:'القابل للتجنّب = المواد + الأجور + الصناعية المتغيرة + الثابتة القابلة للإلغاء.'},
+  {t:'الطلبية الخاصة · Special order', c:'Accept if  Incremental revenue > Incremental cost', s:'Slides 22–25',
+   n:'الثابتة الحالية غير ملائمة؛ ولو كانت الطاقة مستغلة تُضاف تكلفة الفرصة.'},
+  {t:'المورد المقيّد · Constrained resource', c:'CM per unit of constraint = CM per unit ÷ resource used per unit\n→ rank products highest first', s:'Slides 28–32, 37',
+   n:'هامش المساهمة للوحدة وحده مضلّل.'},
+  {t:'المنتجات المشتركة · Sell or process further', c:'Process further if  Incremental revenue after split-off > Incremental cost after split-off', s:'Slides 39–43',
+   n:'التكلفة المشتركة قبل نقطة الانفصال غير ملائمة دائماً.'},
+ ]},
+ {h:'Chapter 8 — Master Budgeting · الموازنة الشاملة', items:[
+  {t:'تسلسل الموازنة الشاملة · Sequence', c:'Sales → Production → (DM · DL · MOH) → Ending FG inventory\n→ S&A → Cash budget → Budgeted IS → Budgeted BS', s:'Slide 12',
+   n:'موازنة المبيعات هي نقطة البداية دائماً.'},
+  {t:'موازنة الإنتاج · Production budget', c:'Production = Sales + Desired ending inventory − Beginning inventory', s:'Slides 26–31',
+   n:'مخزون آخر المدة عادة نسبة من مبيعات الشهر التالي.'},
+  {t:'مشتريات البضاعة · Merchandise purchases', c:'Purchases = Budgeted sales + Desired EI − BI', s:'Slide 27',
+   n:'تُستخدم للشركات التجارية بدل موازنة الإنتاج.'},
+  {t:'المواد المباشرة · Direct materials', c:'RM purchases = Production needs + Desired ending RM − Beginning RM\nEnding RM = % × next month production needs', s:'Slides 33–38'},
+  {t:'التحصيلات النقدية · Cash collections', c:'Collections = (Sales × % same month) + (Prior month × %) + (Two months ago × %)', s:'Slides 20–24'},
+  {t:'أرصدة المدينين والدائنين · AR / AP', c:'Ending AR = uncollected % × that month\'s sales\nEnding AP = unpaid % × that month\'s purchases', s:'Slides 20–24, 39–44'},
+  {t:'تكلفة الوحدة · Unit product cost', c:'= DM per unit + DL per unit + MOH per unit\n(MOH = OH rate × direct labor-hours per unit)', s:'Slides 57–61',
+   n:'المصاريف البيعية والإدارية لا تدخل في تكلفة الوحدة.'},
+  {t:'تكلفة المبيعات · COGS', c:'COGS = Unit sales × Unit product cost', s:'Slides 75–77'},
+  {t:'الموازنة النقدية · Cash budget', c:'Excess (deficiency) = Beginning cash + Receipts − Disbursements\nBorrowing = Desired ending balance − Excess', s:'Slides 67–71',
+   n:'أربعة أقسام: المتحصلات، المدفوعات، الفائض/العجز، التمويل.'},
+ ]},
+ {h:'Chapter 12 — Strategic Performance · قياس الأداء الاستراتيجي', items:[
+  {t:'بطاقة الأداء المتوازن · Balanced scorecard', c:'Financial · Customer · Internal business processes · Learning and growth', s:'Slides 2, 4',
+   n:'«الابتكار» ليست من الفئات الأربع.'},
+  {t:'تكاليف الجودة · Quality costs', c:'Prevention · Appraisal · Internal failure · External failure', s:'Slides 12–14',
+   n:'رفع التقييم يرفع الفشل الداخلي مبدئياً ويخفض الخارجي.'},
+  {t:'وقت الإنتاجية · Throughput time', c:'Throughput = Process + Inspection + Move + Queue', s:'Slides 19–20',
+   n:'وقت المعالجة هو الوحيد المضيف للقيمة.'},
+  {t:'دورة التسليم · Delivery cycle time', c:'Delivery cycle = Wait time + Throughput time', s:'Slides 19–20'},
+  {t:'كفاءة دورة التصنيع · MCE', c:'MCE = Value-added time ÷ Throughput time', s:'Slide 20',
+   n:'‏MCE أقل من 1 هو الوضع الطبيعي.'},
+  {t:'الفعالية الكلية للمعدات · OEE', c:'OEE measures utilization × efficiency × quality', s:'Slide 21'},
+ ]},
+];
+function renderSheet(){
+  $('#v-sheet').innerHTML = `
+  <div class="card pad sheet">
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px">
+      <div><p class="eyebrow">ورقة القوانين</p>
+        <h2 style="border:0;margin:4px 0 0;padding:0">كل ما تحتاجه في صفحة واحدة</h2></div>
+      <span class="spacer"></span>
+      <button class="btn btn-primary" id="sh-print">تصدير PDF</button>
+    </div>
+    <p style="color:var(--muted);font-size:13.5px;margin:0 0 6px">مستخرجة من شرائح اللقاءات 4 و5 و7 فقط، مع رقم الشريحة لكل قاعدة.</p>
+    ${SHEET.map(g=>`<h2>${esc(g.h)}</h2><div class="fx">${g.items.map(it=>
+      `<div class="fx-item"><b>${esc(it.t)}</b><code>${esc(it.c)}</code>
+        ${it.n?`<div style="font-size:13px;color:var(--ink-2)">${esc(it.n)}</div>`:''}
+        <small>${esc(it.s)}</small></div>`).join('')}</div>`).join('')}
+  </div>`;
+  $('#sh-print').onclick = () => { renderSheetPrint(); window.print(); };
+}
+function renderSheetPrint(){
+  $('#printArea').innerHTML = `
+  <div class="p-head"><h1>Managerial Accounting (ACC 520) — Formula & Concept Sheet</h1>
+    <p>Chapters 6, 8 and 12 — from the Meeting 4, 5 and 7 slides</p></div>
+  <div class="p-sheet">${SHEET.map(g=>`<h3>${esc(g.h)}</h3>` + g.items.map(it=>
+    `<div class="f"><b>${esc(it.t)}</b><code>${esc(it.c)}</code>${it.n?`<div>${esc(it.n)}</div>`:''}
+      <small>${esc(it.s)}</small></div>`).join('')).join('')}</div>`;
+}
+
+/* ================= keyboard ================= */
+document.addEventListener('keydown', e => {
+  if(e.ctrlKey || e.metaKey || e.altKey) return;
+  const tag = (e.target.tagName||'').toLowerCase();
+  if(tag==='input' || tag==='select' || tag==='textarea') return;
+  const k = e.key.toUpperCase();
+  if(VIEW==='study'){
+    if(k==='ARROWLEFT'){ $('#s-prev').click(); e.preventDefault(); }
+    else if(k==='ARROWRIGHT'){ $('#s-next').click(); e.preventDefault(); }
+    else if(LTRS.includes(k) && S.mode==='one' && S.list.length){
+      const q = S.list[S.i];
+      if(q.options[k] && !DB.picks[q.id] && !$('#s-reveal').checked){ answerStudy(q.id,k); e.preventDefault(); }
+    }
+  } else if(VIEW==='exam' && !$('#e-run').hidden){
+    if(LTRS.includes(k)){
+      const id = focusedExamQuestion();
+      if(id && BYID[id].options[k]){ pickExam(id,k); e.preventDefault(); }
+    } else if(k==='N'){ $('#e-jump').click(); e.preventDefault(); }
+  }
+});
+
+/* ================= boot ================= */
 fillChapterSelect(); fillSubSelect(); studyRefresh();
-renderExamSetup(); renderReport();
+renderExamSetup(); renderReport(); renderSheet();
 </script>
 </body>
 </html>
